@@ -175,10 +175,10 @@ const Polynomial operator*(const Polynomial &p1, const Polynomial &p2)
     {
         mult.coeff[i] = 0;
     }
-    for (int i = 0; i < mult.order; i++)
+    for (int i = 0; i < p1.get_order(); i++)
     {
 
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j < p2.get_order(); j++)
         {
             mult.coeff[i + j] += p1.coeff[i] * p2.coeff[j];
         }
